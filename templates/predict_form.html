@@ -138,6 +138,49 @@
         .info-card:hover {
             transform: translateY(-10px);
         }
+
+        .info-tooltip {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            position: absolute;
+            right: -320px;
+            width: 300px;
+            top: 0;
+            display: none;
+            z-index: 100;
+        }
+
+        .info-container {
+            position: relative;
+        }
+
+        .info-container:hover .info-tooltip {
+            display: block;
+        }
+
+        .info-icon {
+            color: var(--primary-color);
+            cursor: help;
+            margin-left: 0.5rem;
+        }
+
+        .info-table {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+
+        .info-table th, .info-table td {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-table th {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
@@ -223,8 +266,11 @@
                                     </select>
                                 </div>
                                 
-                                <div class="col-md-6">
-                                    <label for="race_ethnicity" class="form-label">Race/Ethnicity</label>
+                                <div class="col-md-6 info-container">
+                                    <label for="race_ethnicity" class="form-label">
+                                        Race/Ethnicity
+                                        <i class="fas fa-info-circle info-icon"></i>
+                                    </label>
                                     <select class="form-select" id="race_ethnicity" name="race_ethnicity" required>
                                         <option value="">Select race/ethnicity...</option>
                                         <option value="group A">Group A</option>
@@ -233,6 +279,45 @@
                                         <option value="group D">Group D</option>
                                         <option value="group E">Group E</option>
                                     </select>
+                                    <div class="info-tooltip">
+                                        <h6 class="mb-2">Socioeconomic Groups in Indian Context</h6>
+                                        <table class="info-table">
+                                            <tr>
+                                                <th>Group</th>
+                                                <th>Category</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Group A</td>
+                                                <td><strong>Rural, Low-Income</strong><br>
+                                                    <small class="text-muted">Primarily rural areas with limited resources</small>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Group B</td>
+                                                <td><strong>Semi-Urban, Low/Mid Income</strong><br>
+                                                    <small class="text-muted">Small towns and developing areas</small>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Group C</td>
+                                                <td><strong>Urban, Middle-Class</strong><br>
+                                                    <small class="text-muted">City residents with stable income</small>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Group D</td>
+                                                <td><strong>Urban, Upper-Middle-Class</strong><br>
+                                                    <small class="text-muted">Metropolitan areas with good resources</small>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Group E</td>
+                                                <td><strong>Urban, Privileged/High-Income</strong><br>
+                                                    <small class="text-muted">Premium urban areas with excellent facilities</small>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                 
                                 <div class="col-md-6">
@@ -248,13 +333,33 @@
                                     </select>
                                 </div>
                 
-                                <div class="col-md-6">
-                                    <label for="lunch" class="form-label">Lunch Type</label>
+                                <div class="col-md-6 info-container">
+                                    <label for="lunch" class="form-label">
+                                        Lunch Type
+                                        <i class="fas fa-info-circle info-icon"></i>
+                                    </label>
                                     <select class="form-select" id="lunch" name="lunch" required>
                                         <option value="">Select lunch type...</option>
                                         <option value="standard">Standard</option>
                                         <option value="free/reduced">Free/Reduced</option>
                                     </select>
+                                    <div class="info-tooltip">
+                                        <h6 class="mb-2">Lunch Type Categories</h6>
+                                        <table class="info-table">
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Standard</td>
+                                                <td>Full price lunch. Indicates average to higher income background.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Free/Reduced</td>
+                                                <td>Subsidized lunch based on family income. Indicates economically weaker background.</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                 
                                 <div class="col-md-6">
