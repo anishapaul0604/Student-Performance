@@ -1,0 +1,253 @@
+<!-- filepath: /Users/anishapaul2611/Desktop/student_performance/templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Student Performance Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Student Performance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ '/about' }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center">
+        <div class="container-fluid bg-custom text-white">
+            <div style="padding: 50px;">
+                <h1 style="font-size: 80px;">About Us</h1>
+            </div>    
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row align-items-center my-5">
+            <div class="col-md-6">
+                <h2 class="mb-4 fw-bold text-primary">Our Mission</h2>
+                <p class="lead">
+                    Our mission is to empower educators, institutions, and academic stakeholders with precise, data-driven insights to significantly enhance student outcomes and academic success. In today’s dynamic educational environment, understanding student performance is more crucial than ever. We believe that data is more than just numbers—it’s a powerful tool that, when used effectively, can transform how we teach, support, and inspire learners.
+                </p>
+                <p>
+                    By leveraging advanced machine learning models, we aim to bridge the gap between raw academic data and meaningful action. Our platform is built with accessibility, accuracy, and usability in mind, ensuring that every user—whether a teacher, administrator, or counselor—can confidently make informed decisions.
+                </p>
+                <p>
+                    We strive to make performance prediction not only accessible but also actionable, helping identify students at risk, personalize learning experiences, and optimize teaching strategies. Ultimately, our goal is to support a more equitable, informed, and impactful education system where every student has the opportunity to thrive.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="{{ url_for('static', filename='images/mission.png') }}" alt="Our Mission" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+        <section class="container my-5">
+            <div class="text-center mb-5">
+                <h2>Our Team</h2>
+                <p class="mx-auto" style="max-width: 700px;">
+                    We are a group of passionate data scientists, educators, and developers dedicated to creating tools that make a difference. Our team combines expertise in machine learning, education, and software development to deliver innovative solutions.
+                </p>
+            </div>
+        
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="{{ url_for('static', filename='images/men1.png') }}" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Team Member 1">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Ananya Sharma</h5>
+                            <p class="text-muted">Lead Data Scientist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="{{ url_for('static', filename='images/men2.png') }}" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Team Member 2">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Rahul Mehta</h5>
+                            <p class="text-muted">Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="{{ url_for('static', filename='images/women.png') }}" class="card-img-top rounded-circle mx-auto d-block mt-3" style="width: 150px; height: 150px; object-fit: cover;" alt="Team Member 3">
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Priya Das</h5>
+                            <p class="text-muted">Education Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                        What is the Student Performance Prediction tool?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        It’s a machine learning-based tool that predicts student performance outcomes based on academic and behavioral data.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                        How do I use the prediction tool?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Simply fill in student details like gender, parental education, lunch type, and test prep status, then click "Predict" to get results.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                        What kind of data is required for prediction?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We use demographic and education-related attributes like gender, race/ethnicity, parental education level, lunch type, and test preparation status.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                        How accurate are the predictions?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our model is trained on a large dataset and achieves up to 95% accuracy depending on input quality and feature completeness.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                        Can this tool help improve student outcomes?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, by identifying at-risk students early, educators can take action and provide the necessary support to improve academic performance.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                        Is my data safe and private?
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely. We do not store any personal or sensitive information. All predictions are processed locally in real-time and not logged.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                        Who can benefit from using this tool?
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Teachers, school administrators, and academic counselors can use this tool to identify students needing attention and tailor interventions accordingly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Description -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-3">Student Performance</h5>
+                <p>
+                    Empowering educators with AI-driven insights to enhance learning outcomes and student success.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/home" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="/" class="text-white text-decoration-none">Predict</a></li>
+                    <li><a href="/about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="/contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Features -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-3">Features</h5>
+                <ul class="list-unstyled">
+                    <li><span class="text-white">Accurate Predictions</span></li>
+                    <li><span class="text-white">Real-time Insights</span></li>
+                    <li><span class="text-white">User-Friendly Interface</span></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-3">Contact</h5>
+                <p class="mb-1"><i class="bi bi-envelope me-2"></i>support@studentpredictor.com</p>
+                <p class="mb-1"><i class="bi bi-phone me-2"></i>+91 98765 43210</p>
+                <p><i class="bi bi-geo-alt me-2"></i>Guwahati, Assam, India</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

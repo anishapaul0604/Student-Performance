@@ -1,0 +1,20 @@
+.bg-custom{
+    background-image: url('https://img.freepik.com/free-vector/group-protesting-people-holding-transparency_74855-1322.jpg?ga=GA1.1.569573288.1743412509&semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.bg-custom2{
+    background-image: url('https://img.freepik.com/free-vector/flat-prom-background_23-2149370326.jpg?ga=GA1.1.569573288.1743412509&semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
